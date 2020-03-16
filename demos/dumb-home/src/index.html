@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Dumb Home</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+  <h1>Welcome Home, <span id='greeting'>Loading...</span></h1>
+</body>
+<script>
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const userName = urlParams.get('user');
+  window.document.getElementById('userName').innerHtml= userName || 'Anonymous';
+</script>
+</html>
